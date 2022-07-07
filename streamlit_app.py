@@ -64,7 +64,7 @@ streamlit.write('The user entered ', fruit_choice)
 
 streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():
-    with my_cur.cursor() as my_cnr:
+    with my_cur.cursor() as my_cur:
         my_cur.execute("SELECT * from fruit_load_list")
         return my_cur.fetchall()
   
