@@ -26,8 +26,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 #New Section to display fruityvice api response
-fruit_choice = streamlit.text_input('What fruit would you like information about?')
-streamlit.write('Thanks for adding ', fruit_choice)
+fruit_choice = streamlit.text_input('What fruit would you like information about?','kiwi')
+streamlit.write('The user entered ', fruit_choice)
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 #normalize 
@@ -42,6 +42,10 @@ my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contain:")
 streamlit.dataframe(my_data_rows)
+
+#challage lab
+fruit_choice = streamlit.text_input('What fruit would you like to add?')
+streamlit.write('Thanks for adding ', fruit_choice)
 
 
 
