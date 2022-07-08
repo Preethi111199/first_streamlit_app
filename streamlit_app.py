@@ -81,8 +81,8 @@ if streamlit.button("Add a Fruit to the List"):
    streamlit.text(back_from_function)
     
 streamlit.stop()
-   my_data_rows = get_fruit_load_list()
-   streamlit.dataframe(my_data_rows)
+my_data_rows = get_fruit_load_list()
+streamlit.dataframe(my_data_rows)
 
 
 
